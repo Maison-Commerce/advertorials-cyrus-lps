@@ -5,3 +5,4 @@ node_modules/
 
 # Briefings / internal docs — never in repo or deploy
 *.pdf
+*.zip

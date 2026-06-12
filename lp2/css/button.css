@@ -1,0 +1,29 @@
+/* ============================================================
+   CTA button — gold gradient pill used across listicle cards
+   Figma: "Link - TRY RISK-FREE NOW" (e.g. 4001:179)
+   ============================================================ */
+
+.btn-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 53px;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  border: 1px solid var(--btn-border);
+  border-radius: 5px;
+  background: linear-gradient(
+    to bottom,
+    var(--btn-grad-top),
+    var(--btn-grad-bottom)
+  );
+  filter: drop-shadow(0 0 1.5px rgba(79, 79, 79, 0.35));
+  font-family: var(--font-body);
+  font-weight: 600; /* SemiBold */
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+  text-align: center;
+  text-decoration: none;
+}

@@ -1,0 +1,64 @@
+/* ============================================================
+   Why-details + Buying Guide
+   Figma: 4001:695 (Frame 43)
+   ============================================================ */
+
+.why-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: var(--gap-block); /* 32px below the section heading */
+}
+
+/* ---- Buying guide group: title bar + good/bad boxes ---- */
+.guide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.guide__title {
+  margin: 0;
+  padding: 20px;
+  background: var(--color-guide-title-bg);
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 24px;
+  line-height: 1.4;
+  color: var(--color-text-primary);
+}
+
+.guide__box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+.guide__box--good {
+  background: var(--color-guide-good-bg);
+}
+
+.guide__box--bad {
+  background: var(--color-guide-bad-bg);
+}
+
+.guide__heading {
+  margin: 0;
+  font-weight: var(--fw-bold);
+}
+
+.guide__item {
+  margin: 0;
+}
+
+.guide__item strong {
+  font-weight: var(--fw-bold);
+}
