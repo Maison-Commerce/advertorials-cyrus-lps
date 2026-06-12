@@ -1,0 +1,30 @@
+/* ============================================================
+   Content — main article shell
+   Figma: 4001:118 (desktop) / 4001:2089 (mobile)
+   Full-bleed wrapper with a centered 850px article column.
+   Individual blocks are added inside .content__inner one by one.
+   ============================================================ */
+
+.content {
+  width: 100%;
+}
+
+.content__inner {
+  max-width: var(--content-max); /* 850px article column */
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 48px; /* gap before the footer (Figma Content frame) */
+  /* Vertical rhythm between blocks is owned by each block;
+     blocks are stacked in a single column. */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .content__inner {
+    /* 375 − 2×16 = 343px column on mobile */
+    padding-left: var(--header-pad-x-mobile);
+    padding-right: var(--header-pad-x-mobile);
+  }
+}

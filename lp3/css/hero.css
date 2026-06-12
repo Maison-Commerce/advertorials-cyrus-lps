@@ -1,0 +1,147 @@
+/* ============================================================
+   Hero — article title, subtitle, author byline & lead image
+   Figma: 4001:120 (desktop) / 4001:2091 (mobile)
+   ============================================================ */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* ---- Title + subtitle group (gap 12px) ---- */
+.hero__head {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.hero__title {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h1); /* 40px */
+  line-height: var(--lh-tight); /* 1.2 */
+  color: var(--color-text-primary);
+}
+
+.hero__subtitle {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-large); /* 20px */
+  line-height: var(--lh-base); /* 1.5 */
+  color: var(--color-text-primary);
+}
+
+/* ---- Author byline (gap 16px) ---- */
+.hero__author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.hero__avatar {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.hero__author-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.hero__byline {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-small); /* 14px */
+  line-height: var(--lh-base);
+  color: var(--color-text-primary);
+  white-space: nowrap; /* desktop: single line */
+}
+
+.hero__byline strong {
+  font-weight: var(--fw-bold);
+}
+
+.hero__byline-break {
+  display: none; /* desktop: name + date on one line */
+}
+
+.hero__role {
+  margin: 0;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-small); /* 14px */
+  line-height: var(--lh-base);
+  color: var(--color-text-primary);
+}
+
+/* ---- Lead media: bg composite + featured product overlay ---- */
+.hero__media {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  aspect-ratio: 850 / 364;
+  overflow: hidden;
+}
+
+.hero__media-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* True Nutra pouch blended into the empty centre slot */
+.hero__media-overlay {
+  position: absolute;
+  left: 32.6%;
+  top: -3.3%;
+  width: 38.41%;
+  height: 89.69%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* ============================================================
+   Mobile (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 24px; /* Heading/Mobile/H4 */
+    line-height: var(--lh-logo); /* 1.4 */
+  }
+
+  .hero__subtitle {
+    font-size: 18px; /* Text/Medium/Regular */
+  }
+
+  .hero__avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hero__byline {
+    white-space: normal; /* allow wrap */
+  }
+
+  .hero__byline-break {
+    display: inline; /* force break after the author name */
+  }
+
+  .hero__media {
+    aspect-ratio: 343 / 142;
+  }
+}

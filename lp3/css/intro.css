@@ -1,0 +1,33 @@
+/* ============================================================
+   Intro — lead paragraphs introducing the comparison
+   Figma: 4001:130 (desktop) / 4001:2101 (mobile)
+   ============================================================ */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: var(--gap-block); /* 32px below the hero */
+}
+
+.intro__p {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: 18px; /* Text/Medium/Regular */
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+/* Para 1 — Raleway + pure black, per Figma */
+.intro__p--lead {
+  font-family: var(--font-accent);
+  color: var(--color-black);
+}
+
+/* Para 3 — emphasised */
+.intro__p--bold {
+  font-weight: var(--fw-bold);
+}

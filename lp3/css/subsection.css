@@ -1,0 +1,36 @@
+/* ============================================================
+   Subsection — dark H5 heading + body paragraphs
+   Figma: 4001:716 (Frame 44)
+   ============================================================ */
+
+.subsection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: var(--gap-block); /* 32px */
+}
+
+.subsection__title {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 24px; /* Heading/H5 */
+  line-height: 1.4;
+  color: var(--color-text-primary);
+}
+
+.subsection__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+.subsection__body p {
+  margin: 0;
+}
