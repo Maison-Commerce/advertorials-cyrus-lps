@@ -1,0 +1,32 @@
+/* ============================================================
+   Criteria — the six scoring factors (bold label + description)
+   Figma: 4001:141 (desktop) / 4001:2112 (mobile)
+   ============================================================ */
+
+.criteria {
+  list-style: none;
+  margin: 0;
+  margin-top: var(--gap-block); /* 32px below the section heading */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+/* Flush variant — no top margin (when it isn't following a section heading) */
+.criteria--flush {
+  margin-top: 0;
+}
+
+.criteria__item {
+  margin: 0;
+}
+
+.criteria__item strong {
+  font-weight: var(--fw-bold);
+}

@@ -1,0 +1,425 @@
+/* ============================================================
+   Product card — listicle comparison card
+   Figma: 4001:151 (desktop, card #1 "True Nutra")
+   Reusable: cards #2–#5 reuse this with different data.
+   ============================================================ */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background: var(--color-card-bg);
+}
+
+/* ---- Head: rank/name/subtitle + medal ---- */
+.card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.card__titles {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+.card__title {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 32px;
+  line-height: 1.3;
+}
+
+/* Winner card underlines its title */
+.card--winner .card__title {
+  text-decoration: underline;
+}
+
+.card__subtitle {
+  margin: 0;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.card__medal {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+}
+
+/* Grade line in the header — mobile only (desktop shows it as a stat column) */
+.card__grade-line {
+  display: none;
+  margin: 0;
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 26px;
+  color: var(--color-text-primary);
+}
+
+/* ---- Body ---- */
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* ---- Stats row: product image · grade · rating ---- */
+.card__stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.card__stat {
+  width: 256px;
+  height: 256px;
+  box-sizing: border-box;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__stat--image {
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 var(--color-card-shadow);
+}
+
+.card__stat--grade,
+.card__stat--rating {
+  flex-direction: column;
+  gap: 8px;
+  filter: drop-shadow(0 0 5px var(--color-card-shadow));
+}
+
+.card__product {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card__stat-label {
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 26px;
+  color: var(--color-text-primary);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.card__grade {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 72px;
+  color: var(--color-text-primary);
+}
+
+.card__rating-score {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 50px;
+  color: var(--color-text-primary);
+  padding-top: 8px;
+}
+
+.card__stars {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--color-stars);
+  padding-top: 8px;
+  white-space: nowrap;
+}
+
+.card__stars-off {
+  color: var(--color-star-off);
+}
+
+/* Winner card shows grade/rating in brand cyan; others stay dark */
+.card--winner .card__stat-label,
+.card--winner .card__grade,
+.card--winner .card__rating-score,
+.card--winner .card__grade-line {
+  color: var(--color-cyan);
+}
+
+/* ---- White content panel ---- */
+.card__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background: var(--color-white);
+  filter: drop-shadow(0 0 5px var(--color-card-shadow));
+}
+
+.card__desc {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+.card__desc p {
+  margin: 0;
+}
+
+/* ---- Offer line + CTA ---- */
+.card__offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+.card__offer-text {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  text-align: center;
+}
+
+/* ---- "Why It's #1" list ---- */
+.card__why {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+.card__why p {
+  margin: 0;
+}
+.card__why-title {
+  font-weight: var(--fw-bold);
+}
+.card__why-item strong {
+  font-weight: var(--fw-bold);
+}
+
+/* ---- In-card hairline ---- */
+.card__rule {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  border-top: var(--stroke-weight-1) solid var(--color-rule);
+}
+
+/* ---- Score bars ---- */
+.card__scores {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.score {
+  display: flex;
+  align-items: center;
+  gap: 62px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 32px;
+}
+.score__label {
+  flex: 1 1 0;
+  min-width: 0;
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+.score__meter {
+  flex-shrink: 0;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.score__track {
+  width: 100%;
+  background: var(--color-bar-track);
+}
+.score__fill {
+  width: var(--fill, 97.6%);
+  height: 24px;
+  background: var(--color-bar-fill);
+}
+.score__value {
+  padding: 0 48px;
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+/* ---- PROS / CONS ---- */
+.card__verdict {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.card__pros,
+.card__cons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card__verdict-title {
+  margin: 0;
+  padding-top: 24px;
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 20px;
+  line-height: 1.5;
+}
+.card__pros .card__verdict-title {
+  color: var(--color-pros);
+}
+.card__cons .card__verdict-title {
+  color: var(--color-cons);
+}
+.card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.card__list li {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+.card__bullet {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+/* ---- Our Experience / Bottom Line ---- */
+.card__notes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+.card__notes p {
+  margin: 0;
+}
+.card__notes strong {
+  font-weight: var(--fw-bold);
+}
+
+/* ============================================================
+   Mobile (≤ 768px)
+   - drop the medal; show "Overall Grade" as a header line
+   - stats: 2 equal columns (image + rating), grade column hidden
+   - score rows: label on top, bar + value inline below
+   ============================================================ */
+@media (max-width: 768px) {
+  .card__medal {
+    display: none;
+  }
+  .card__grade-line {
+    display: block;
+  }
+
+  /* Stats: two equal columns, 180px tall */
+  .card__stats {
+    gap: 20px;
+  }
+  .card__stat {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    height: 180px;
+  }
+  .card__stat--image {
+    padding: 20px 8px;
+  }
+  .card__stat--grade {
+    display: none; /* grade shown in header on mobile */
+  }
+
+  /* Rating column — smaller numerals */
+  .card__stat-label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .card__rating-score {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .card__stars {
+    font-size: 20px;
+  }
+
+  /* Score rows reflow: label above, [bar + value] inline below */
+  .score {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 0;
+  }
+  .score__meter {
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+  }
+  .score__track {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .score__value {
+    flex-shrink: 0;
+    padding: 0;
+    text-align: center;
+  }
+}

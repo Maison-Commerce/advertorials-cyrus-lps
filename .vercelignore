@@ -1,0 +1,8 @@
+# Dev-only — never deployed. Keeps the Vercel build a pure static upload.
+node_modules
+tools
+docs
+package.json
+package-lock.json
+*.md
+.DS_Store

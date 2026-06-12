@@ -1,0 +1,100 @@
+/* ============================================================
+   Top Pick — dashed-border highlight box (image + checklist + CTA)
+   Figma: 4001:730 (desktop) / 4001:2656 (mobile)
+   ============================================================ */
+
+.top-pick {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: var(--gap-block); /* 32px */
+  background: var(--color-toppick-bg);
+  border: 3px dashed var(--color-toppick-border);
+}
+
+.top-pick__image {
+  flex-shrink: 0;
+  width: 240px;
+  height: 390px;
+}
+
+.top-pick__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-pick__content {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.top-pick__title {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 24px; /* Heading/H5 */
+  line-height: 1.4;
+  color: var(--color-text-primary);
+}
+
+.top-pick__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.top-pick__list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+.top-pick__check {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+/* This CTA's long label can wrap on narrow widths — let the button grow
+   instead of clipping the fixed-height pill. */
+.top-pick .btn-cta {
+  height: auto;
+  min-height: 53px;
+}
+
+/* ============================================================
+   Mobile (≤ 768px) — stack vertically, centered
+   ============================================================ */
+@media (max-width: 768px) {
+  .top-pick {
+    flex-direction: column;
+    align-items: center;
+  }
+  .top-pick__image {
+    height: 264px;
+  }
+  .top-pick__title {
+    text-align: center;
+  }
+  /* Drop the button's side padding so the long label fits one line */
+  .top-pick .btn-cta {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

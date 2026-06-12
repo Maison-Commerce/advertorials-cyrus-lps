@@ -1,0 +1,26 @@
+/* ============================================================
+   Listicle — "Our Top 5…" title + the stack of product cards
+   Figma: 4001:149 (Frame 12)
+   ============================================================ */
+
+.listicle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: var(--gap-block); /* 32px below the divider */
+}
+
+.listicle__title {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 32px;
+  line-height: 1.3;
+  color: var(--color-cyan);
+}
+
+@media (max-width: 768px) {
+  .listicle__title {
+    line-height: 1.2;
+  }
+}

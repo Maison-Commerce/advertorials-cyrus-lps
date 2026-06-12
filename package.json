@@ -1,0 +1,15 @@
+{
+  "name": "advertorials-cyrus-lps",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "shot": "node tools/shot.mjs",
+    "inspect": "node tools/inspect.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0",
+    "pixelmatch": "^6.0.0",
+    "pngjs": "^7.0.0"
+  }
+}

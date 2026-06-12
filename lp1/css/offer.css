@@ -1,0 +1,58 @@
+/* ============================================================
+   Offer — "Special Offer for Our Readers" CTA section
+   Figma: 4001:721 (Frame 45)
+   ============================================================ */
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: var(--gap-block); /* 32px */
+}
+
+.offer__title {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 32px;
+  line-height: 1.3;
+  color: var(--color-cyan);
+}
+
+.offer__text {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+/* Tight 12px-gap benefits list, no bullets */
+.offer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+.offer__list li {
+  margin: 0;
+}
+
+.offer__list strong {
+  font-weight: var(--fw-bold);
+}
+
+@media (max-width: 768px) {
+  .offer__title {
+    line-height: 1.2;
+  }
+}
